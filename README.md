@@ -65,4 +65,22 @@ npm run preview
 - TypeScript
 - Vite
 - Tailwind CSS
-- Lucide React (for icons) 
+- Lucide React (for icons)
+
+## Deployment
+
+The app is deployed to GitHub Pages at: https://jawednur.github.io/Sticky-Notes/
+
+### Automatic Deployment
+
+The app is automatically deployed to GitHub Pages when changes are pushed to the `main` branch using GitHub Actions.
+
+### Manual Deployment
+
+You can also deploy manually using:
+
+```bash
+npm run deploy
+```
+
+This will build the app and push it to the `gh-pages` branch. 
