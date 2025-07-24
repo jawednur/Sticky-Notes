@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #000;
+        color: #4ade80;
+        /* Disable text selection for ASCII art */
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Terminal-style cursor for inputs */
+    input[type="text"],
+    textarea {
+        caret-color: #4ade80;
+        caret-shape: block;
+    }
+
+    /* ASCII-style scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #000;
+        border: 1px solid #4ade80;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #4ade80;
+        border: 1px solid #000;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #22c55e;
+    }
+
+    /* Datetime input styling */
+    input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+        filter: invert(48%) sepia(79%) saturate(1087%) hue-rotate(86deg) brightness(118%) contrast(119%);
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
+        opacity: 1;
+    }
+
+    input[type="datetime-local"]::-webkit-datetime-edit {
+        padding: 0;
+        font-family: monospace;
+    }
+
+    input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
+        background: transparent;
+    }
+
+    input[type="datetime-local"]::-webkit-datetime-edit-text {
+        color: #16a34a;
+        padding: 0 2px;
+    }
+
+    input[type="datetime-local"]::-webkit-datetime-edit-month-field,
+    input[type="datetime-local"]::-webkit-datetime-edit-day-field,
+    input[type="datetime-local"]::-webkit-datetime-edit-year-field,
+    input[type="datetime-local"]::-webkit-datetime-edit-hour-field,
+    input[type="datetime-local"]::-webkit-datetime-edit-minute-field {
+        color: #86efac;
+    }
+
+    /* Retro CRT effect (optional - uncomment if you want it) */
+    /*
+  body::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+  }
+  */
+}
