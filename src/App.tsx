@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Plus, X, Edit2, Trash2, Grid3X3, List, Layout, CheckCircle } from 'lucide-react';
+import { Plus, X, Edit2, Trash2, List, Layout, CheckCircle } from 'lucide-react';
 import { calculateTimeRemaining, formatTimeRemaining, formatDateTimeForInput } from './utils';
 import { Board, Note, DONE_BOARD_ID } from './types';
 import { completeNote, uncompleteNote, formatCompletionDate } from './noteHelpers';
@@ -131,7 +131,7 @@ const StickyNotesApp = () => {
   const [isAddingNote, setIsAddingNote] = useState(false);
   const [newNoteContent, setNewNoteContent] = useState('');
   const [newNoteDueDate, setNewNoteDueDate] = useState('');
-  const [selectedColor, setSelectedColor] = useState('bg-black border-green-400 text-green-400');
+  const [selectedColor, _setSelectedColor] = useState('bg-black border-green-400 text-green-400');
   const [isAddingBoard, setIsAddingBoard] = useState(false);
   const [newBoardName, setNewBoardName] = useState('');
   const [editingBoard, setEditingBoard] = useState<number | null>(null);
@@ -860,7 +860,7 @@ const StickyNotesApp = () => {
                               <label className="text-green-400 text-[9px] font-mono">[DUE DATE/TIME]</label>
                               <input
                                 type="datetime-local"
-                                defaultValue={note.dueDate ? new Date(note.dueDate).toISOString().slice(0, 16) : ''}
+                                value={editingNoteDueDate || (note.dueDate ? new Date(note.dueDate).toISOString().slice(0, 16) : '')}
                                 onChange={(e) => setEditingNoteDueDate(e.target.value)}
                                 onClick={(e) => e.stopPropagation()}
                                 onMouseDown={(e) => e.stopPropagation()}
