@@ -6,7 +6,8 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "build:webpack": "webpack"
     },
     "dependencies": {
         "lucide-react": "^0.292.0",
