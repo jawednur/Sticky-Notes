@@ -1,14 +1,11 @@
 # Sticky Notes App
 
-A digital sticky notes application built with React, TypeScript, and Tailwind CSS. Organize your thoughts across different project boards with drag-and-drop functionality.
+I'm sick and tired of putting sticky notes on the wall 
 
 ## Features
 
 - **Multiple Boards**: Create and manage different boards for various projects
 - **Drag and Drop**: Move sticky notes between different positions
-- **Customizable Colors**: Choose from various colors for your notes
-- **Edit in Place**: Click notes to expand and edit them
-- **Responsive Design**: Works well on different screen sizes
 
 ## Getting Started
 
@@ -71,10 +68,7 @@ npm run preview
 
 The app is deployed to GitHub Pages at: https://jawednur.github.io/Sticky-Notes/
 
-### Automatic Deployment
-
-The app is automatically deployed to GitHub Pages when changes are pushed to the `main` branch using GitHub Actions.
-
+Utilize localStorage on the browser.
 ### Manual Deployment
 
 You can also deploy manually using:
